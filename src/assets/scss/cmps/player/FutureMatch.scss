@@ -1,0 +1,28 @@
+.future-match-card-container {
+  display: flex;
+  .future-match-card {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 1px 8px 0px;
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      //   width: 30px;
+    }
+    img {
+      width: 30px;
+    }
+    .match-difficulty {
+      width: 40px;
+      height: 15px;
+      background-color: rebeccapurple;
+      color: white;
+    }
+  }
+}

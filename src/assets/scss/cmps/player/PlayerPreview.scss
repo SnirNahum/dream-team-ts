@@ -1,0 +1,18 @@
+.player-preview {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.player-preview-name {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0;
+  gap: 3em;
+}
+
+.position-ranking {
+  text-align: center;
+  padding-bottom: 5px;
+  font-size: 0.8em;
+}
