@@ -3,7 +3,9 @@ import { Link, NavLink } from "react-router-dom";
 export default function AppHeader() {
   return (
     <header className="app-header full flex">
-      <h1 className="logo">Dream-team</h1>
+      <NavLink to="/">
+        <h1 className="logo">Dream-team</h1>
+      </NavLink>
       <nav className="app-header-links">
         <NavLink to="/">Dashboard</NavLink>
         <NavLink to="/planner">Planner</NavLink>

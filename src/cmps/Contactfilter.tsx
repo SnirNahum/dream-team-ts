@@ -31,16 +31,14 @@ export function ContactFilter(props) {
   const { name } = filterBy;
   return (
     <form className="contact-filter">
-      <section>
-        <label htmlFor="name">Name</label>
-        <input
-          onChange={handleChange}
-          value={name}
-          type="text"
-          name="name"
-          id="name"
-        />
-      </section>
+      <label htmlFor="name">Name</label>
+      <input
+        onChange={handleChange}
+        value={name}
+        type="text"
+        name="name"
+        id="name"
+      />
     </form>
   );
 }
