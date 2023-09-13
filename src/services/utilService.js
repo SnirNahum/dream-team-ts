@@ -105,14 +105,14 @@ export function getTeamImg(teamCode) {
 
 export function matchDifficulty(difficulty) {
   if (player.status === 1) {
-    return `difficulty-${difficulty}`;
+    return `match-difficulty difficulty-${difficulty}`;
   } else if (player.status === 2) {
-    return `difficulty-${difficulty}`;
+    return `match-difficulty difficulty-${difficulty}`;
   } else if (player.status === 3) {
-    return `difficulty-${difficulty}`;
+    return `match-difficulty difficulty-${difficulty}`;
   } else if (player.status === 4) {
-    return `difficulty-${difficulty}`;
+    return `match-difficulty difficulty-${difficulty}`;
   } else if (player.status === 5) {
-    return `difficulty-${difficulty}`;
+    return `match-difficulty difficulty-${difficulty}`;
   }
 }

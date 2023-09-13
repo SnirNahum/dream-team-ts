@@ -3,7 +3,7 @@ import Skeleton from "react-loading-skeleton";
 import { useSelector } from "react-redux";
 import FutureMatchesPreview from "./FutureMatchesPreview";
 
-function FutureMatchesList({ player }) {
+function FutureMatchesList() {
   const playerFixtures = useSelector((state) => state.fplModule.playerFixtures);
   const teams = useSelector((state) => state.fplModule.teams);
 
@@ -16,10 +16,10 @@ function FutureMatchesList({ player }) {
       setfixtureInfo(playerFixtures.slice(0, 3));
       const playerTeamIds = playerFixtures
         .slice(0, 3)
-        .map((fixture) => fixture.rival_team);
+        .map((fixture: any) => fixture.rival_team);
 
-      const updatedPlayerTeams = playerTeamIds.map((teamId) =>
-        teams.find((team) => team.id === teamId)
+      const updatedPlayerTeams = playerTeamIds.map((teamId: number) =>
+        teams.find((team: any) => team.id === teamId)
       );
       setPlayerTeams(updatedPlayerTeams);
 
@@ -34,12 +34,13 @@ function FutureMatchesList({ player }) {
       <h1>Future Matches</h1>
       <div className="future-match-card-container">
         {isLoading ? (
-          <Skeleton count={3} width={70} height={70} />
+          <div className="skeleton-players-page">
+            <Skeleton count={3} width={130} height={60} />
+          </div>
         ) : (
           playerTeams.map((team, index) => (
             <FutureMatchesPreview
               team={team}
-              playerFixtures={playerTeams}
               fixtureInfo={fixtureInfo[index]}
               key={team.id}
             />

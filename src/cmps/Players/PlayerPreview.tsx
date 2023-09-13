@@ -4,12 +4,10 @@ import PlayerStats from "./PlayerStats";
 import PlayerBio from "./PlayerBio";
 import { useEffect } from "react";
 import PlayerNews from "./PlayerNews";
-import FutureMatches from "./FutureMatchesList";
-import { useSelector } from "react-redux";
+import FutureMatchesList from "./FutureMatchesList";
+import PastMatchesList from "./PastMatchesList";
 
 export default function PlayerPreview({ player }: any) {
-  const teams = useSelector((state) => state.fplModule.teams);
-
   useEffect(() => {
     loadPlayer(player.id);
   }, [player.id]);
@@ -29,7 +27,10 @@ export default function PlayerPreview({ player }: any) {
       </section>
       <div className="player-preview-header">
         <PlayerStats player={player} />
-        <FutureMatches player={player} teams={teams} />
+        <div className="player-preview-matches">
+          <PastMatchesList player={player} />
+          <FutureMatchesList />
+        </div>
       </div>
     </section>
   );
