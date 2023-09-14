@@ -35,7 +35,7 @@ function FutureMatchesList() {
       <div className="future-match-card-container">
         {isLoading ? (
           <div className="skeleton-players-page">
-            <Skeleton count={3} width={130} height={60} />
+            <Skeleton count={3} />
           </div>
         ) : (
           playerTeams.map((team, index) => (

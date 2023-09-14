@@ -1,6 +1,13 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import AppHeaderResponsive from "./AppHeaderResponsive";
+import { useState } from "react";
 
 export default function AppHeader() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleChange() {
+    setIsOpen(!isOpen);
+  }
   return (
     <header className="app-header full flex">
       <NavLink to="/">
@@ -14,8 +21,8 @@ export default function AppHeader() {
         <NavLink to="/fixtures">Fixtures</NavLink>
         <NavLink to="/predictions">Predictions</NavLink>
       </nav>
-      <section className="flex align-center">
-        <NavLink to="/login">Login</NavLink>
+      <section>
+        <AppHeaderResponsive isOpen={isOpen} handleChange={handleChange} />
       </section>
     </header>
   );

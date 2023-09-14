@@ -70,4 +70,49 @@
   .magnifier {
     left: 8px;
   }
+
+  .modal-content {
+    width: 300px;
+    height: 580px;
+  }
+  .player-preview-name {
+    img {
+      width: 30%;
+    }
+    .player-bio {
+      width: 30%;
+      p,
+      h5 {
+        font-size: 14px;
+      }
+    }
+  }
+  .stats ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      flex-grow: 1;
+    }
+  }
+  .player-preview-matches {
+    padding: 0;
+    gap: 0;
+  }
+  .future-match-card-container {
+    flex-wrap: wrap;
+  }
+  .player-news {
+    font-size: 11px;
+  }
+
+  .skeleton-players-page {
+    margin-right: 13px;
+
+    span {
+      flex-direction: column;
+      width: 132px;
+      height: 200px;
+      gap: 0;
+    }
+  }
 }

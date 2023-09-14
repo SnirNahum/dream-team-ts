@@ -1,5 +1,5 @@
 import { Route, HashRouter as Router, Routes } from "react-router-dom";
-import AppHeader from "./cmps/AppHeader";
+import AppHeader from "./cmps/AppHeader/AppHeader";
 import "./assets/scss/global.scss";
 import "react-loading-skeleton/dist/skeleton.css";
 import Teams from "./pages/Teams";

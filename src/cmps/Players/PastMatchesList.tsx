@@ -33,7 +33,7 @@ export default function PastMatchesList() {
       <div className="future-match-card-container">
         {isLoading ? (
           <div className="skeleton-players-page">
-            <Skeleton count={3} width={130} height={50} />
+            <Skeleton count={3} />
           </div>
         ) : (
           pastTeams.map((team: any, index) => (
